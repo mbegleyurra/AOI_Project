@@ -1,0 +1,9 @@
+player id=302 radius=150.0 world=1000.0x1000.0
+player snapshots=401 spectator snapshots=401 entities already known when declared visible (preknown)=0 unresolved pending=0
+label,metric,count,mean,median,p95,max
+all,new_entity_delay_ms,300,5.574,5.574,5.574,5.574
+all,new_entity_delay_ticks,300,0.000,0.000,0.000,0.000
+all,snapshot_skew_ms,250,0.616,0.366,2.199,5.574
+all,snapshot_interval_ms,400,49.941,50.008,52.750,57.844
+all,snapshot_latency_ms,401,0.943,0.603,2.614,22.145
+wrote /home/kali/Documents/AOI_Project/bench/latency-raw.csv

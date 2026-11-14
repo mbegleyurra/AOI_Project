@@ -318,6 +318,8 @@ public final class GameServer {
         private volatile boolean dead;
         /** Ids sent to this player in the most recent snapshot (read by the spectator broadcast, same tick thread). */
         private volatile int[] lastVisible;
+        /** Set once this player sent REQUEST_TIMESTAMPS; it then gets a TIMESTAMP before every SNAPSHOT. */
+        private volatile boolean timestamps;
 
         ClientConn(Socket socket) throws IOException {
             this.socket = socket;
@@ -345,6 +347,8 @@ public final class GameServer {
                             float dx = in.readFloat();
                             float dy = in.readFloat();
                             world.setPlayerVelocity(avatar, dx, dy);
+                        } else if (type == Protocol.REQUEST_TIMESTAMPS) {
+                            timestamps = true;
                         }
                     }
                 } catch (IOException ignored) {
@@ -369,6 +373,9 @@ public final class GameServer {
                 }
                 lastVisible = ids;
                 synchronized (out) {
+                    if (timestamps) {
+                        Protocol.writeTimestamp(out, tick, Protocol.nowEpochMicros());
+                    }
                     out.writeByte(Protocol.SNAPSHOT);
                     out.writeInt(tick);
                     out.writeInt(visible.size());

@@ -1,0 +1,38 @@
+Server listening on 7777, algorithm distance(r=150.0)
+Spectator port 7778 (full unfiltered world)
+spectator connected
+client 301 connected
+spectator disconnected
+client 301 disconnected
+client 302 connected
+spectator connected
+clients=1 spectators=1 entities=301  sent/s: entities=128 bytes=1680
+clients=1 spectators=1 entities=301  sent/s: entities=212 bytes=2724
+clients=1 spectators=1 entities=301  sent/s: entities=410 bytes=5100
+clients=1 spectators=1 entities=301  sent/s: entities=484 bytes=5988
+clients=1 spectators=1 entities=301  sent/s: entities=419 bytes=5208
+clients=1 spectators=1 entities=301  sent/s: entities=360 bytes=4500
+clients=1 spectators=1 entities=301  sent/s: entities=439 bytes=5448
+clients=1 spectators=1 entities=301  sent/s: entities=399 bytes=4968
+clients=1 spectators=1 entities=301  sent/s: entities=284 bytes=3588
+clients=1 spectators=1 entities=301  sent/s: entities=297 bytes=3744
+clients=1 spectators=1 entities=301  sent/s: entities=320 bytes=4020
+clients=1 spectators=1 entities=301  sent/s: entities=333 bytes=4176
+spectator disconnected
+client 302 disconnected
+client 303 connected
+spectator connected
+clients=1 spectators=1 entities=301  sent/s: entities=433 bytes=5358
+clients=1 spectators=1 entities=301  sent/s: entities=555 bytes=6840
+clients=1 spectators=1 entities=301  sent/s: entities=481 bytes=5952
+clients=1 spectators=1 entities=301  sent/s: entities=368 bytes=4596
+clients=1 spectators=1 entities=301  sent/s: entities=310 bytes=3900
+clients=1 spectators=1 entities=301  sent/s: entities=476 bytes=5892
+clients=1 spectators=1 entities=301  sent/s: entities=365 bytes=4560
+clients=1 spectators=1 entities=301  sent/s: entities=372 bytes=4644
+clients=1 spectators=1 entities=301  sent/s: entities=405 bytes=5040
+clients=1 spectators=1 entities=301  sent/s: entities=485 bytes=6000
+clients=1 spectators=1 entities=301  sent/s: entities=554 bytes=6828
+clients=1 spectators=1 entities=301  sent/s: entities=564 bytes=6948
+spectator disconnected
+client 303 disconnected

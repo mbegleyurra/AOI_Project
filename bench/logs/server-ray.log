@@ -1,0 +1,38 @@
+Server listening on 7777, algorithm rayVisibility(r=150.0)
+Spectator port 7778 (full unfiltered world)
+spectator connected
+spectator disconnected
+client 301 connected
+client 301 disconnected
+client 302 connected
+spectator connected
+clients=1 spectators=1 entities=301  sent/s: entities=313 bytes=3891
+clients=1 spectators=1 entities=301  sent/s: entities=321 bytes=4032
+clients=1 spectators=1 entities=301  sent/s: entities=430 bytes=5340
+clients=1 spectators=1 entities=301  sent/s: entities=450 bytes=5580
+clients=1 spectators=1 entities=301  sent/s: entities=403 bytes=5016
+clients=1 spectators=1 entities=301  sent/s: entities=455 bytes=5640
+clients=1 spectators=1 entities=301  sent/s: entities=521 bytes=6432
+clients=1 spectators=1 entities=301  sent/s: entities=409 bytes=5088
+clients=1 spectators=1 entities=301  sent/s: entities=328 bytes=4116
+clients=1 spectators=1 entities=301  sent/s: entities=264 bytes=3348
+clients=1 spectators=1 entities=301  sent/s: entities=307 bytes=3864
+clients=1 spectators=1 entities=301  sent/s: entities=388 bytes=4836
+client 302 disconnected
+spectator disconnected
+client 303 connected
+spectator connected
+clients=1 spectators=1 entities=301  sent/s: entities=307 bytes=3828
+clients=1 spectators=1 entities=301  sent/s: entities=377 bytes=4704
+clients=1 spectators=1 entities=301  sent/s: entities=322 bytes=4044
+clients=1 spectators=1 entities=301  sent/s: entities=287 bytes=3624
+clients=1 spectators=1 entities=301  sent/s: entities=262 bytes=3324
+clients=1 spectators=1 entities=301  sent/s: entities=366 bytes=4572
+clients=1 spectators=1 entities=301  sent/s: entities=303 bytes=3816
+clients=1 spectators=1 entities=301  sent/s: entities=296 bytes=3732
+clients=1 spectators=1 entities=301  sent/s: entities=228 bytes=2916
+clients=1 spectators=1 entities=301  sent/s: entities=165 bytes=2160
+clients=1 spectators=1 entities=301  sent/s: entities=243 bytes=3096
+clients=1 spectators=1 entities=301  sent/s: entities=464 bytes=5748
+spectator disconnected
+client 303 disconnected

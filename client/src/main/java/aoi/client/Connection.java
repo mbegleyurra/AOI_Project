@@ -19,6 +19,8 @@ public final class Connection implements AutoCloseable {
     private final DataOutputStream out;
 
     private volatile float[] rects;
+    /** {tick, serverEpochMicros} of the latest TIMESTAMP message, or null if none has arrived. */
+    private volatile long[] lastTimestamp;
 
     public final int clientId;
     public final float worldW;
@@ -45,6 +47,17 @@ public final class Connection implements AutoCloseable {
         return rects;
     }
 
+    /** Latest {tick, serverEpochMicros} from a TIMESTAMP message, or null if timestamps were not requested/sent. */
+    public long[] lastTimestamp() {
+        return lastTimestamp;
+    }
+
+    /** Opts in to server timestamps (one TIMESTAMP message before each SNAPSHOT). Old servers ignore it. */
+    public synchronized void requestTimestamps() throws IOException {
+        out.writeByte(Protocol.REQUEST_TIMESTAMPS);
+        out.flush();
+    }
+
     /** Blocks reading snapshots until the connection closes. */
     public void readLoop(Consumer<Snapshot> onSnapshot) {
         try {
@@ -52,6 +65,10 @@ public final class Connection implements AutoCloseable {
                 byte type = in.readByte();
                 if (type == Protocol.OBSTACLE_RECTS) {
                     rects = Protocol.readObstacleRects(in);
+                    continue;
+                }
+                if (type == Protocol.TIMESTAMP) {
+                    lastTimestamp = Protocol.readTimestamp(in);
                     continue;
                 }
                 if (type != Protocol.SNAPSHOT) {

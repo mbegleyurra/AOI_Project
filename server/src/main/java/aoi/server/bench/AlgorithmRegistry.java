@@ -9,7 +9,7 @@ import java.util.List;
 /** Builds interest managers by simple class name via reflection, so missing classes are just skipped. */
 public final class AlgorithmRegistry {
     public static final List<String> DEFAULT_NAMES = List.of(
-            "DistanceInterest", "SquareInterest", "HexagonalInterest", "TileDistanceInterest",
+            "AllInterest", "DistanceInterest", "SquareInterest", "HexagonalInterest", "TileDistanceInterest",
             "NeighborInterest", "RayVisibilityInterest", "TileVisibilityInterest", "PathDistanceInterest");
 
     private static final String[] PACKAGES = {"aoi.server.algo.", "aoi.server."};

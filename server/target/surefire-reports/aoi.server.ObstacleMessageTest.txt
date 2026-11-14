@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: aoi.server.ObstacleMessageTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.178 s -- in aoi.server.ObstacleMessageTest

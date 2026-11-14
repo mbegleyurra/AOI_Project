@@ -1,0 +1,38 @@
+Server listening on 7777, algorithm all
+Spectator port 7778 (full unfiltered world)
+spectator connected
+client 301 connected
+spectator disconnected
+client 301 disconnected
+client 302 connected
+spectator connected
+clients=1 spectators=1 entities=301  sent/s: entities=4816 bytes=57936
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+client 302 disconnected
+spectator disconnected
+client 303 connected
+spectator connected
+clients=1 spectators=1 entities=301  sent/s: entities=5117 bytes=61557
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+clients=1 spectators=1 entities=301  sent/s: entities=6020 bytes=72420
+spectator disconnected
+client 303 disconnected

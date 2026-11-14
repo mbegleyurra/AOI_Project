@@ -1,13 +1,14 @@
 package aoi.server;
 
 import aoi.common.Protocol;
+import aoi.server.algo.AllInterest;
 import aoi.server.algo.RayVisibilityInterest;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Usage: ServerMain [bots=300] [radius=150] [port=7777] [seed=42] [spectatorPort=port+1] [--algo=distance|ray]
+ * Usage: ServerMain [bots=300] [radius=150] [port=7777] [seed=42] [spectatorPort=port+1] [--algo=distance|ray|all]
  *                   [--obstacles=24]
  *
  * <p>--algo=distance (default) is plain radius interest. --algo=ray is ray visibility interest: within radius AND
@@ -45,7 +46,8 @@ public final class ServerMain {
         switch (algo) {
             case "distance" -> interest = new DistanceInterest(radius);
             case "ray" -> interest = new RayVisibilityInterest(obstacles, radius);
-            default -> throw new IllegalArgumentException("unknown --algo=" + algo + " (use distance or ray)");
+            case "all" -> interest = new AllInterest(radius);
+            default -> throw new IllegalArgumentException("unknown --algo=" + algo + " (use distance, ray or all)");
         }
         new GameServer(world, interest, port, spectatorPort).start();
     }

@@ -1,0 +1,10 @@
+/home/kali/Documents/AOI_Project/client/src/main/java/aoi/client/ClientApp.java
+/home/kali/Documents/AOI_Project/client/src/main/java/aoi/client/Connection.java
+/home/kali/Documents/AOI_Project/client/src/main/java/aoi/client/LatencyProbe.java
+/home/kali/Documents/AOI_Project/client/src/main/java/aoi/client/LatencyTracker.java
+/home/kali/Documents/AOI_Project/client/src/main/java/aoi/client/LatencyViewApp.java
+/home/kali/Documents/AOI_Project/client/src/main/java/aoi/client/ObserverApp.java
+/home/kali/Documents/AOI_Project/client/src/main/java/aoi/client/ProbeClient.java
+/home/kali/Documents/AOI_Project/client/src/main/java/aoi/client/SpectatorConnection.java
+/home/kali/Documents/AOI_Project/client/src/main/java/aoi/client/SpectatorDetailProbe.java
+/home/kali/Documents/AOI_Project/client/src/main/java/aoi/client/SpectatorProbe.java

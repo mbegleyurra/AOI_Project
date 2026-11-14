@@ -50,6 +50,17 @@ import java.io.IOException;
  *   type byte, so run matching client builds against an obstacle server. Independent of OBSTACLE_MAP
  *   (byte 7), which is the opt-in cell-bitmap used by the spectator detail view.
  *   Use writeObstacleRects / readObstacleRects (the latter after the type byte has been consumed).
+ *
+ * SERVER TIMESTAMPS (opt-in, per PLAYER connection; backward compatible):
+ * Player -> server:
+ *   REQUEST_TIMESTAMPS : byte 10   (no body; servers that predate it ignore the unknown byte)
+ * Server -> that player, once per tick, immediately BEFORE the SNAPSHOT of the same tick:
+ *   TIMESTAMP : byte 11, int tick, long serverEpochMicros
+ *   serverEpochMicros = microseconds since the Unix epoch on the server when the snapshot was built
+ *   (see nowEpochMicros). Client latency = its own epoch micros on receipt - serverEpochMicros; this is
+ *   only meaningful when client and server share a clock (same machine). A client that never sends
+ *   REQUEST_TIMESTAMPS receives exactly the byte stream it received before this extension.
+ *   Use writeTimestamp / readTimestamp (the latter after the type byte has been consumed).
  */
 public final class Protocol {
     public static final byte WELCOME = 1;
@@ -61,6 +72,8 @@ public final class Protocol {
     public static final byte OBSTACLE_MAP = 7;
     public static final byte DETAIL_SNAPSHOT = 8;
     public static final byte OBSTACLE_RECTS = 9;
+    public static final byte REQUEST_TIMESTAMPS = 10;
+    public static final byte TIMESTAMP = 11;
 
     public static final int DEFAULT_PORT = 7777;
     public static final int DEFAULT_SPECTATOR_PORT = 7778;
@@ -69,6 +82,26 @@ public final class Protocol {
     public static final int ENTITY_BYTES = 12;
 
     private static final int MAX_OBSTACLE_RECTS = 100_000;
+
+    /** Wall-clock microseconds since the Unix epoch (comparable across processes on one machine). */
+    public static long nowEpochMicros() {
+        java.time.Instant now = java.time.Instant.now();
+        return now.getEpochSecond() * 1_000_000L + now.getNano() / 1000;
+    }
+
+    /** Writes a complete TIMESTAMP message (type byte included). */
+    public static void writeTimestamp(DataOutput out, int tick, long epochMicros) throws IOException {
+        out.writeByte(TIMESTAMP);
+        out.writeInt(tick);
+        out.writeLong(epochMicros);
+    }
+
+    /** Reads the body of a TIMESTAMP message (type byte already consumed): {tick, serverEpochMicros}. */
+    public static long[] readTimestamp(DataInput in) throws IOException {
+        int tick = in.readInt();
+        long micros = in.readLong();
+        return new long[] {tick, micros};
+    }
 
     /** Writes a complete OBSTACLE_RECTS message (type byte included). rects = x,y,w,h per obstacle. */
     public static void writeObstacleRects(DataOutput out, float[] rects) throws IOException {

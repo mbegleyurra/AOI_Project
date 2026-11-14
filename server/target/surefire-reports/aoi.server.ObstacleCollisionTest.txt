@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: aoi.server.ObstacleCollisionTest
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.185 s -- in aoi.server.ObstacleCollisionTest

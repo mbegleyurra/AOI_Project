@@ -1,0 +1,11 @@
+player id=303 server radius=150.0 view radius=150.0 world=1000.0x1000.0 net-delay-ms=40 warmup-ticks=20 los=true
+player snapshots=242 spectator snapshots=242 warmed up=true preknown=0 lost before known=0 unresolved pending=0
+label,metric,count,mean,median,p95,max
+ray@40ms,new_entity_delay_ms,79,39.901,39.908,40.254,42.300
+ray@40ms,new_entity_delay_ticks,79,0.000,0.000,0.000,0.000
+ray@40ms,preknown_count,0,NaN,NaN,NaN,NaN
+ray@40ms,lost_before_known_count,0,NaN,NaN,NaN,NaN
+ray@40ms,snapshot_skew_ms,221,39.933,39.898,40.634,50.014
+ray@40ms,snapshot_interval_ms,221,49.962,49.998,52.875,59.807
+ray@40ms,snapshot_latency_ms,240,40.536,40.215,42.654,50.151
+wrote /home/kali/Documents/AOI_Project/bench/latency-raw.csv
